@@ -3,7 +3,7 @@ import CartIcon from '../Cart/CartIcon';
 
 function HeadercartButton(props) {
     return (
-        <button className={styles.button}>
+        <button className={styles.button} onClick={props.onClick} >
             <span className={styles.icon}>
                 <CartIcon />
             </span>
