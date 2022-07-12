@@ -40,6 +40,17 @@ function Checkout(props) {
 
         const formIsValid = enteredNameIsValid && enteredStreetIsValid && enteredPostalCodeIsValid && enteredCityIsValid;
 
+        if (!formIsValid) {
+            return;
+        }
+
+        props.onConfirm({
+            name: enteredName,
+            street: enteredStreet,
+            postalCode: enteredPostalCode,
+            city: enteredCity
+        });
+
     };
 
     return <form className={styles.form} onSubmit={confirmHandler}>
